@@ -9,22 +9,22 @@ class BookList extends Component {
 
   componentDidMount() {
     const {bookstoreService} = this.props;
-    const data = bookstoreService.getBooks();
-
-    this.props.booksLoaded(data);
+    bookstoreService.getBooks()
+      .then(data => this.props.booksLoaded(data))
+      .catch(console.error);
   }
 
   render() {
     const {books} = this.props;
 
     return (
-      <ul>
+      <div className="row">
         {books.map(book => (
-          <li key={book.id}>
+          <div key={book.id} className="col-4 mt-3">
             <BookListItem book={book} />
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   }
 }
