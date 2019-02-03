@@ -6,7 +6,7 @@ const BookListItem = ({book}) => {
 
   return (
       <div className="card col book-list-item">
-        <img className="card-img-top" src={cover} alt={title}/>
+        <img className="card-img-top pt-3" src={cover} alt={title}/>
         <div className="card-body text-nowrap text-truncate">
           <Link to="/" className="card-title text-info"><h5>{title}</h5></Link>
           <div className="row">
