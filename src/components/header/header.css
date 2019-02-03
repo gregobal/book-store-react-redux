@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.header .logo {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.header .logo .logo-blue {
+    color: #17a2b8;
+}
+
+.header .cart {
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.header .cart .cart-icon {
+    margin-right: 10px;
+    color: #17a2b8;
+}

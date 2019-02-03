@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const BookListItem = ({book}) => {
   const {title, author, price, cover} = book;
@@ -7,11 +8,11 @@ const BookListItem = ({book}) => {
       <div className="card col book-list-item">
         <img className="card-img-top" src={cover} alt={title}/>
         <div className="card-body text-nowrap text-truncate">
-          <h5><a href="/#" className="card-title">{title}</a></h5>
+          <Link to="/" className="card-title text-info"><h5>{title}</h5></Link>
           <div className="row">
             <div className="col-9">
               <p className="card-text">{author}</p>
-              <h6>Q {price}</h6>
+              <h5>Q{price}</h5>
             </div>
             <div className="col-3">
               <button className="btn btn-info">
